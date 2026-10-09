@@ -1,0 +1,26 @@
+import { chromium, devices } from 'playwright';
+const S = process.argv[2];
+const b = await chromium.launch({executablePath:'/opt/pw-browsers/chromium'}).catch(()=>chromium.launch());
+const ctx = await b.newContext({...devices['Pixel 7']});
+const p = await ctx.newPage();
+const errs=[]; p.on('pageerror',e=>errs.push(e.message)); p.on('console',m=>{if(m.type()==='error')errs.push(m.text())});
+await p.goto('http://localhost:8765/'); await p.waitForTimeout(1500);
+await p.fill('#m_vin','lrwygcek1sc123456');
+await p.click('.item[data-id="b3"] [data-act="nok"]');
+await p.fill('#note_b3','Achterdeur links steekt 2 mm uit');
+await p.click('.item[data-id="b2"] [data-act="ok"]');
+await p.setInputFiles('#galInput', S+'/test.jpg').catch(()=>{});
+// setInputFiles needs pendingItem: click gal first
+await p.evaluate(()=>{});
+const [fc] = await Promise.all([p.waitForEvent('filechooser'), p.click('.item[data-id="b3"] [data-act="gal"]')]);
+await fc.setFiles(S+'/test.jpg'); await p.waitForTimeout(1500);
+const sw = await p.evaluate(async()=>!!(await navigator.serviceWorker.getRegistration()));
+await p.reload(); await p.waitForTimeout(1500);
+const persisted = await p.evaluate(()=>({nok:document.getElementById('nokN').textContent, ph:document.getElementById('phN').textContent, vin:document.getElementById('m_vin').value}));
+await p.screenshot({path:S+'/shot1.png'});
+await p.click('#exportBtn'); await p.waitForTimeout(300);
+await p.screenshot({path:S+'/shot2.png'});
+await p.click('#eView'); await p.waitForTimeout(800);
+await p.screenshot({path:S+'/shot3.png'});
+console.log(JSON.stringify({sw, persisted, errs}));
+await b.close();

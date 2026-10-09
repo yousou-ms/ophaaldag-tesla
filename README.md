@@ -33,3 +33,16 @@ Open de app daarna altijd via het icoon. Op iPhone heeft de geïnstalleerde app 
 * Exporteer het rapport voor je vertrekt bij Tesla: delen via WhatsApp of mail, of downloaden.
 * Pas je later iets aan in de app, verhoog dan `VERSION` in sw.js (bv. ophaaldag-v2), anders blijft de oude versie in de cache hangen.
 * Test thuis één keer: foto maken, rapport exporteren, daarna "Alles wissen".
+
+## Live
+
+https://yousou-ms.github.io/ophaaldag-tesla/
+
+## Mappen in deze repository
+
+| Pad | Wat |
+|---|---|
+| index.html, manifest.webmanifest, sw.js, icons/ | De app zoals hij online staat |
+| extra/claude-artifact-versie.html | Eerste versie, gemaakt voor claude.ai (niet installeerbaar) |
+| extra/make_icons.py | Maakt de iconen opnieuw: `python3 extra/make_icons.py icons` (vereist Pillow) |
+| extra/test-mobiel.mjs | Test in een gsm browser met Playwright: app laden, afvinken, foto toevoegen, rapport bekijken |
