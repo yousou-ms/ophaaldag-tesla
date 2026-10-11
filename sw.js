@@ -1,6 +1,6 @@
 // Ophaaldag Model Y: offline werking.
 // Verhoog VERSION bij elke aanpassing, dan halen geïnstalleerde apps de nieuwe versie op.
-const VERSION = "ophaaldag-v2";
+const VERSION = "ophaaldag-v3";
 const SHELL = [
   "./",
   "./index.html",
