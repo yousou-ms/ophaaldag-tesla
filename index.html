@@ -263,7 +263,8 @@ const DATA = [
     {id:"p6", t:"Inschrijvingsbewijs en nummerplaat in orde", h:"Controleer dat het VIN op het inschrijvingsbewijs klopt."},
     {id:"p7", t:"Beide sleutelkaarten openen en sluiten de wagen"},
     {id:"p8", t:"Telefoonsleutel werkt: openen bij naderen, sluiten bij weggaan"},
-    {id:"p9", t:"Kilometerstand en laadniveau genoteerd", h:"Vul ze in bij de gegevens bovenaan. Een hoge stand wijst op een wagen die al gereden heeft."}
+    {id:"p9", t:"Kilometerstand en laadniveau genoteerd", h:"Vul ze in bij de gegevens bovenaan. Een hoge stand wijst op een wagen die al gereden heeft."},
+    {id:"p10", t:"Wagen staat op jouw account in de Tesla app", h:"Voeg meteen een tweede bestuurder toe als je dat wil."}
   ]},
   {id:"pics", title:"Bewijsfoto's rondom", sub:"voor je iets aanraakt", hint:"Ook als alles in orde is: deze foto's leggen de staat bij levering vast. Gebruik het fototoestelicoon.", items:[
     {id:"f1", t:"Foto linksvoor en rechtsvoor, schuin genomen"},
@@ -288,6 +289,7 @@ const DATA = [
     {id:"b13", t:"Wielkasten: alle clips en bevestigingen aanwezig", h:"Ontbrekende clips geven later geratel."},
     {id:"b14", t:"Dorpels en onderkant bumpers zonder schade, alles zit vast", h:"Bukken loont: transportschade zit vaak laag."},
     {id:"b15", t:"Geen lijmresten, folieresten of polijstsporen"},
+    {id:"b18", t:"Nummerplaat achteraan stevig gemonteerd, zonder krassen of beschadigde boorgaten"},
     {id:"b16", t:"21 inch velgen en lage banden extra nagekeken op stoeprandschade en bulten", tag:"perf", only:"perf"},
     {id:"b17", t:"Achterspoiler vlak, remschijven en remklauwen zonder schade, wagen staat recht", tag:"perf", only:"perf"}
   ]},
@@ -297,7 +299,9 @@ const DATA = [
     {id:"d3", t:"Laadklep opent via de app en door erop te drukken"},
     {id:"d4", t:"Vergrendelen en ontgrendelen werkt met kaart, telefoon en app"},
     {id:"d5", t:"Rubbers rond deuren en koffer zitten overal goed"},
-    {id:"d6", t:"Trekhaak (indien besteld) klapt uit, zit vast en de verlichting werkt"}
+    {id:"d6", t:"Trekhaak (indien besteld) klapt uit, zit vast en de verlichting werkt"},
+    {id:"d7", t:"Onderste koffer en frunk zijn droog", h:"Til de kofferbodem op. Vocht of water wijst op een lek in een afdichting."},
+    {id:"d8", t:"Sleepoog en bandenreparatieset aanwezig, indien meegeleverd", h:"Kijk in de frunk en onder de kofferbodem. Vraag na wat bij jouw wagen hoort."}
   ]},
   {id:"int", title:"Interieur", items:[
     {id:"i1", t:"Zetels zonder vlekken, krassen of open naden, alle verstellingen werken"},
@@ -308,7 +312,9 @@ const DATA = [
     {id:"i6", t:"Hemel, stijlen en bekleding zonder krassen of slecht passende panelen", h:"Donker interieur toont fijne krassen en pluisjes. Kijk met je lamp."},
     {id:"i7", t:"Achterbank klapt plat en terug omhoog, alles vergrendelt"},
     {id:"i8", t:"Kofferbodem, onderste koffer en matten proper en onbeschadigd"},
-    {id:"i9", t:"Gordels rollen vlot op en klikken vast op alle plaatsen"}
+    {id:"i9", t:"Gordels rollen vlot op en klikken vast op alle plaatsen"},
+    {id:"i10", t:"Alle vier de ruiten gaan elektrisch op en neer, kinderslot achteraan werkt"},
+    {id:"i11", t:"Binnenverlichting, sfeerverlichting en spiegeltjes in de zonnekleppen werken"}
   ]},
   {id:"elec", title:"Schermen, elektronica en camera's", items:[
     {id:"e1", t:"Hoofdscherm zonder dode pixels, verkleuring of zones die niet reageren"},
@@ -321,6 +327,9 @@ const DATA = [
     {id:"e8", t:"Muziek speelt op alle luidsprekers zonder geratel"},
     {id:"e9", t:"USB C poorten en draadloze laders werken"},
     {id:"e16", t:"USB stick voor Sentry Mode en Dashcam aanwezig in het handschoenkastje en herkend", h:"Zit er een stick in de USB poort van het handschoenkastje? Bovenaan het scherm verschijnt dan een camera icoon. Zet Sentry Mode aan in de app en kijk of er opnames verschijnen. Niet elke wagen krijgt een stick mee: vraag het na als hij ontbreekt."},
+    {id:"e17", t:"Buitenspiegels klappen in en uit, spiegelverwarming en achterruitverwarming werken"},
+    {id:"e18", t:"Telefoon koppelt via Bluetooth en een testoproep klinkt goed aan beide kanten", h:"Zo test je meteen de microfoon."},
+    {id:"e19", t:"Mobiel signaal aanwezig, kaarten en navigatie laden", h:"Kijk ook of Premium Connectivity of de proefperiode actief is."},
     {id:"e10", t:"Bandenspanning zichtbaar voor alle vier de banden, geen waarschuwing"},
     {id:"e11", t:"Geen foutmeldingen of waarschuwingen op het scherm"},
     {id:"e12", t:"Laden getest ter plaatse en de laadklep vergrendelt de kabel"},
